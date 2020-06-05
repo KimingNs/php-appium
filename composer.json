@@ -33,6 +33,9 @@
       "PHPUnit/"
     ]
   },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
   "include-path": [
     ""
   ]
