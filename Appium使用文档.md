@@ -36,9 +36,9 @@
 
 ​	在path后加上：`%APPIUM_HOME%;%APPIUM_HOME%\node_modules\.bin;`
 
-配置成功后在控制台输入adb会出现如下画面：<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612114304905.png" alt="image-20200612114304905"  />
+配置成功后在控制台输入adb会出现如下画面：
 
-
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612114304905-1591956147455.png)
 
 adb常用命令：
 
