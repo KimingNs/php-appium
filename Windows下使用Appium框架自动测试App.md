@@ -12,9 +12,9 @@
 
 ​	下载Android Studio自动安装SDK，地址：https://developer.android.google.cn/studio/
 
-​	安装后在系统环境变量配置ANDROID_HOME：你的安装目录\android-sdk	(eg:E:\Server\android-sdk)
+​	安装后在系统环境变量配置ANDROID_HOME：`你的安装目录\android-sdk	(eg:E:\Server\android-sdk)`
 
-​	在path后加上：%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;
+​	在path后加上：`%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;`
 
 ### 1.3	配置JDK
 
@@ -32,9 +32,9 @@
 
 ### 1.5	配置adb
 
-​	系统环境变量配置APPIUM_HOME：你的安装目录\Appium	(eg:E:\Server\Appium)
+​	系统环境变量配置APPIUM_HOME：`你的安装目录\Appium	(eg:E:\Server\Appium)`
 
-​	在path后加上：%APPIUM_HOME%;%APPIUM_HOME%\node_modules\.bin;
+​	在path后加上：`%APPIUM_HOME%;%APPIUM_HOME%\node_modules\.bin;`
 
 配置成功后在控制台输入adb会出现如下画面：<img src="\Windows下使用Appium框架自动测试App.assets\image-20200612114304905.png" alt="image-20200612114304905"  />
 
@@ -42,11 +42,11 @@
 
 adb常用命令：
 
-获取app包名(appPackage)和界面名(appAvtivity)：adb shell dumpsys window windows | findstr mFocusedApp
+获取app包名(appPackage)和界面名(appAvtivity)：**`adb shell dumpsys window windows | findstr mFocusedApp`**
 
-连接MuMu模拟器：adb connect 127.0.0.1:7555
+连接MuMu模拟器：**`adb connect 127.0.0.1:7555`**
 
-重启appium服务：adb kill-server + adb start-server  先kill再start
+重启appium服务：**`adb kill-server`** + **`adb start-server`**  先kill再start
 
 
 
@@ -58,17 +58,17 @@ github下载地址：https://github.com/appium/php-client.git
 
 ### 2.2	配置composer
 
-框架下载好后的文件夹中打开composer.json
+框架下载好后的文件夹中打开`composer.json`
 
 <img src="\Windows下使用Appium框架自动测试App.assets\image-20200612115056575.png" alt="image-20200612115056575" style="zoom: 67%;" />
 
-首先修改name属性："name": "随便的内容",
+首先修改name属性：`"name": "随便的内容",`
 
-在require属性中加入："appium/php-client": "dev-master"
+在require属性中加入：`"appium/php-client": "dev-master"`
 
-在require-dev属性中加入："phpunit/phpunit": "^9"
+在require-dev属性中加入：`"phpunit/phpunit": "^9"`
 
-然后在该目录下执行：composer update
+然后在该目录下执行：**`composer update`**
 
 <img src="\Windows下使用Appium框架自动测试App.assets\image-20200612120258811.png" alt="image-20200612120258811" style="zoom: 67%;" />
 
@@ -95,7 +95,7 @@ require_once('../vendor/appium/php-client/test/functional/android/appium_tests.p
 require_once('config/SuperDana.php');
 ```
 
-config目录下SuperDana相对应的APP配置如下:
+`config`目录下`SuperDana`相对应的APP配置如下:
 
 ```php
 <?php
@@ -186,7 +186,7 @@ $test->SuperDanaXy($appPackage, $appActivityBefore, $config);
 
 ```php
 $this->setPort(4723); //APPIUM的服务器端口号，服务器默认是localhost
-$this->setDesiredCapabilities($config);
+$this->setDesiredCapabilities($config);//加载appium配置
 ```
 
 打开APP：
@@ -212,7 +212,7 @@ $this->byXPath("//android.widget.TextView[@text='lzikan']")->click();
 
 ### 3.3	寻找元素工具
 
-在Android SDK/tools/bin 目录下有一个UIAutomatorViewer工具
+在`Android SDK/tools/bin` 目录下有一个UIAutomatorViewer工具
 
 <img src="\Windows下使用Appium框架自动测试App.assets\image-20200612140956710.png" alt="image-20200612140956710" style="zoom: 67%;" />
 
@@ -262,7 +262,7 @@ $this->byXPath("//android.widget.TextView[@text='Konfirmasi & Lanjut']");
     $this->byXPath("//android.view.View[1]/following-sibling::android.view.View[5]")
 ```
 
-android.widget.EditText和android.view.View是class，序号是后面/前面第几个元素，
+**`android.widget.EditText`**和**`android.view.View`**是class，序号是后面/前面第几个元素，
 
 前面的方法意思是将第二个EditText作为参照物，找前面第一个EditText，
 
@@ -272,21 +272,21 @@ android.widget.EditText和android.view.View是class，序号是后面/前面第�
 
 ## 4.	运行流程
 
-1.每天使用前，先输入adb看appium服务是否启动成功
+-  1.每天使用前，先输入adb看appium服务是否启动成功
 
-2.先打开MuMu模拟器，打开要测的App
+-  2.先打开MuMu模拟器，打开要测的App
 
-3.输入 adb connect 127.0.0.1:7555，再输入 adb shell dumpsys window windows | findstr mFocusedApp，获取到当前测试的app的包名$appPackage和界面名$appActivity，配置到config目录下
+-  3.输入 **`adb connect 127.0.0.1:7555`**，再输入 **`adb shell dumpsys window windows | findstr mFocusedApp`**，获取到当前测试的app的包名`$appPackage`和界面名`$appActivity`，配置到`config`目录下
 
-<img src="C:\Users\Administrator\Pictures\Typora图片\image-20200612145106424.png" alt="image-20200612145106424" style="zoom: 67%;" />
+<img src="\Windows下使用Appium框架自动测试App.assets\image-20200612145106424.png" alt="image-20200612145106424" style="zoom: 67%;" />
 
-4.启动Appium Desktop
+-  4.启动Appium Desktop
 
 <img src="\Windows下使用Appium框架自动测试App.assets\image-20200612145405232.png" alt="image-20200612145405232" style="zoom: 33%;" /><img src="\Windows下使用Appium框架自动测试App.assets\image-20200612145518676.png" alt="image-20200612145518676" style="zoom:50%;" />
 
-5.运行测试代码
+-  5.运行测试代码
 
-6.查看MuMu模拟器端App测试流程效果
+-  6.查看MuMu模拟器端App测试流程效果
 
 
 
