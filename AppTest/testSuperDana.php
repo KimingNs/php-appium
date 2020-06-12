@@ -1,9 +1,9 @@
 <?php
-require_once('../../vendor/autoload.php');
+require_once('../vendor/autoload.php');
 require_once 'PHPUnit/Autoload.php';
-require_once('../../PHPUnit/Extensions/AppiumTestCase.php');
-require_once('../../PHPUnit/Extensions/AppiumTestCase/Element.php');
-require_once('../../vendor/appium/php-client/test/functional/android/appium_tests.php');
+require_once('../PHPUnit/Extensions/AppiumTestCase.php');
+require_once('../PHPUnit/Extensions/AppiumTestCase/Element.php');
+require_once('../vendor/appium/php-client/test/functional/android/appium_tests.php');
 require_once('config/SuperDana.php');
 
 
@@ -40,10 +40,18 @@ class testSuperDana extends AppiumTests
         $this->startActivity(array("appPackage" => $appPackage,
             "appActivity" => $appActivityAfter));//打开app应用
         //无同意协议
-        $this->byXPath("//android.widget.TextView[@text='CogitoX中文']")->click();
-        $this->byId('com.superdana.dana.id:id/tv_option_loan')->click();
+        if (is_null($this->byXPath("//android.widget.TextView[@text='CogitoX中文']"))) {
+            echo '1';
+        } else {
+            $this->byXPath("//android.widget.TextView[@text='CogitoX中文']")->click();
+        }
+        if (is_null($this->byXPath("//android.widget.TextView[@text='CogitoX中文']"))) {
+            echo '2';
+        } else {
+            $this->byId('com.superdana.dana.id:id/tv_option_loan')->click();
+        }
         $this->byId('com.superdana.dana.id:id/register_phone')->value('085223801076');
-        $this->byId('com.superdana.dana.id:id/get_code_btn_ok')->click();
+//        $this->byId('com.superdana.dana.id:id/get_code_btn_ok')->click();
     }
 
     function SuperDanaText1($appPackage, $appActivityAfter, $config)
@@ -121,7 +129,7 @@ class testSuperDana extends AppiumTests
 
         //确定
         $this->initiateTouchAction()->press(array('x' => 408, 'y' => 1187))->release()->perform();
-//        $this->byXPath("//android.view.View[1]/following-sibling::android.view.View[19]")->click();
+
     }
 
     function SuperDanaText2($appPackage, $appActivityAfter, $config)
@@ -313,7 +321,6 @@ class testSuperDana extends AppiumTests
         $this->startActivity(array("appPackage" => $appPackage,
             "appActivity" => $appActivityAfter));//打开app应用
 
-
         $this->byXPath("//android.widget.TextView[@text='CogitoX中文']")->click();
         sleep(3);
 
@@ -327,5 +334,5 @@ class testSuperDana extends AppiumTests
 }
 
 $test = new testSuperDana();
-$test->SuperDanaLoginin($appPackage, $appActivityAfter, $config);
+$test->SuperDanaLoginin($appPackage, $appActivityBefore, $config);
 
