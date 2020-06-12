@@ -20,7 +20,7 @@
 
 ​	jdk 1.8及以上 地址：https://www.oracle.com/cn/java/technologies/javase/javase-jdk8-downloads.html
 
-<img src=".\windows下使用Appium框架自动测试App.assets\image-20200612143200037.png" alt="image-20200612143200037" style="zoom: 67%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612143200037.png)
 
 配置环境变量教程地址：https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html
 
@@ -28,7 +28,7 @@
 
 ​	下载Appium Desktop，地址：https://github.com/appium/appium-desktop/releases/tag/v1.3.1
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612142614922.png" alt="image-20200612142614922" style="zoom:50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612142614922.png)
 
 ### 1.5	配置adb
 
@@ -60,7 +60,7 @@ github下载地址：https://github.com/appium/php-client.git
 
 框架下载好后的文件夹中打开`composer.json`
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612115056575.png" alt="image-20200612115056575" style="zoom: 67%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612115056575.png)
 
 首先修改name属性：`"name": "随便的内容",`
 
@@ -70,7 +70,7 @@ github下载地址：https://github.com/appium/php-client.git
 
 然后在该目录下执行：**`composer update`**
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612120258811.png" alt="image-20200612120258811" style="zoom: 67%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612120258811.png)
 
 等文件全部下载完，出现vendor文件夹即安装成功
 
@@ -82,7 +82,7 @@ github下载地址：https://github.com/appium/php-client.git
 
 我的文件目录如下：
 
-![image-20200612122030978](.\Windows下使用Appium框架自动测试App.assets\image-20200612122030978.png)
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612122030978-1591956621285.png)
 
 要引入的文件有：
 
@@ -214,31 +214,31 @@ $this->byXPath("//android.widget.TextView[@text='lzikan']")->click();
 
 在`Android SDK/tools/bin` 目录下有一个UIAutomatorViewer工具
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612140956710.png" alt="image-20200612140956710" style="zoom: 67%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612140956710.png)
 
 双击运行：
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612141028385.png" alt="image-20200612141028385" style="zoom: 50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612141028385.png)
 
 这是一个能确定元素位置的工具，打开模拟器启动app后，点击
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612141312971.png" alt="image-20200612141312971" style="zoom: 50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612141312971.png)
 
 即可将app画面映射
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612141547308.png" alt="image-20200612141547308" style="zoom: 50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612141547308.png)
 
 要将图片旋转，点击
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612141635009.png" alt="image-20200612141635009" style="zoom:50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612141635009.png)
 
 将图片保存，再将图片旋转至想要的方向，点击
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612141843940.png" alt="image-20200612141843940" style="zoom:50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612141843940.png)
 
 打开刚才保存的文件即可：
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612142010624.png" alt="image-20200612142010624" style="zoom:50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612142010624.png)
 
 查找元素定位有id，class，xpath这3个基本方法
 
@@ -253,7 +253,7 @@ $this->byXPath("//android.widget.TextView[@text='Konfirmasi & Lanjut']");
 
 查找同class下的同级元素定位：
 
-<img src="\Windows下使用Appium框架自动测试App.assets\image-20200612152027908.png" alt="image-20200612152027908" style="zoom: 67%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612152027908.png)
 
 ```php
     //由后面向前定位同级元素
@@ -278,11 +278,13 @@ $this->byXPath("//android.widget.TextView[@text='Konfirmasi & Lanjut']");
 
 -  3.输入 **`adb connect 127.0.0.1:7555`**，再输入 **`adb shell dumpsys window windows | findstr mFocusedApp`**，获取到当前测试的app的包名`$appPackage`和界面名`$appActivity`，配置到`config`目录下
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612145106424.png" alt="image-20200612145106424" style="zoom: 67%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612145106424.png)
 
 -  4.启动Appium Desktop
 
-<img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612145405232.png" alt="image-20200612145405232" style="zoom: 33%;" /><img src=".\Windows下使用Appium框架自动测试App.assets\image-20200612145518676.png" alt="image-20200612145518676" style="zoom:50%;" />
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612145405232.png)
+
+![image](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612145518676.png)
 
 -  5.运行测试代码
 
@@ -294,7 +296,7 @@ $this->byXPath("//android.widget.TextView[@text='Konfirmasi & Lanjut']");
 
 Appium Desktop服务器自带日志，也可以点击红框查看txt格式日志，时间戳可在高级设置中开启
 
-![image-20200612145937646](.\Windows下使用Appium框架自动测试App.assets\image-20200612145937646.png)
+![](Appium%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.assets/image-20200612145937646.png)
 
 该图中，绿色的200是执行成功，灰色的部分是要执行的功能/查找的元素，红色的500是执行失败，执行失败的原因也在上面说出来了
 
