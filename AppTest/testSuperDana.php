@@ -42,6 +42,7 @@ class testSuperDana extends AppiumTests
         //无同意协议
         if (is_null($this->byXPath("//android.widget.TextView[@text='CogitoX中文']"))) {
             echo '1';
+            exit();
         } else {
             $this->byXPath("//android.widget.TextView[@text='CogitoX中文']")->click();
         }
@@ -334,5 +335,5 @@ class testSuperDana extends AppiumTests
 }
 
 $test = new testSuperDana();
-$test->SuperDanaLoginin($appPackage, $appActivityBefore, $config);
+$test->SuperDanaLoginin($appPackage, $appActivityAfter, $config);
 
