@@ -2,6 +2,7 @@
 $appPackage = 'com.superdana.dana.id';
 $appActivityBefore = 'com.tp.money.hut.XieyiActivity';
 $appActivityAfter = 'com.tp.money.hut.MainActivity';
+$appActivity = 'com.tp.money.hut.XieyiActivity';
 $config = array(
     'automationName' => 'Appium',//设置自动化测试引擎，默认为appium
     'platformVersion' => '6.0.1',//手机操作系统版本
