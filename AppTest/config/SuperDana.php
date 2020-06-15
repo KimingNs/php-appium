@@ -1,8 +1,8 @@
 <?php
 $appPackage = 'com.superdana.dana.id';
+$appActivity = 'com.tp.money.hut.XieyiActivity';
 $appActivityBefore = 'com.tp.money.hut.XieyiActivity';
 $appActivityAfter = 'com.tp.money.hut.MainActivity';
-$appActivity = 'com.tp.money.hut.XieyiActivity';
 $config = array(
     'automationName' => 'Appium',//设置自动化测试引擎，默认为appium
     'platformVersion' => '6.0.1',//手机操作系统版本
@@ -13,7 +13,10 @@ $config = array(
     'androidDeviceReadyTimeout' => 30,//等待设备在启动应用后准备就绪的超时时间，单位s
     'unicodeKeyboard' => true, //这下面两个是输入中文的设置支持
     'resetKeyboard' => true,
-//    'app' => '',//执行要安装的app的绝对路径，android系统设置appPackage和appActivit，可以为空
+    'app' => 'C:\Users\Administrator\Desktop\selenium自动化测试框架\appium\AppInstall\SuperDanar中文.apk',//执行要安装的app的绝对路径，android系统设置appPackage和appActivit，可以为空
+    'appPackage' => $appPackage,//设置启动的app包名
+    'appActivity' => $appActivity,//app界面名
+
 //    'browserName' => '',//执行自动化测试的手机web，对app应用进行测试化为空
 //    'language' => '',//设置模拟器语言
 //    'locale' => '',//设置区域
@@ -23,8 +26,6 @@ $config = array(
 //    'autoWebview' => '',//直接转换到WebView上下文，默认为false
 //    'noRest' => '',//不在会话前重置应用状态，默认为false
 ////    android特有
-//    'appPackage' => 'com.superdana.dana.id',//设置启动的app包名
-//    'appActivity' => 'com.tp.money.hut.XieyiActivity',//app界面名
 //    'appWaitActivity' => '.Settings',//想要等待启动的app界面名
 //    'androidCoverage' => '',//用于执行测试的Instrumentation类，作为命令 adb shell am instrument -e coverage true -w 的 -w 参数
 //    //eg：com.my.Pkg/com.my.Pkg.Instrumentation.MyInstrumentation
