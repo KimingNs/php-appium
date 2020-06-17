@@ -4,7 +4,7 @@ require_once 'PHPUnit/Autoload.php';
 require_once('../PHPUnit/Extensions/AppiumTestCase.php');
 require_once('../PHPUnit/Extensions/AppiumTestCase/Element.php');
 require_once('../vendor/appium/php-client/test/functional/android/appium_tests.php');
-require_once('config/SuperDana.php');
+require_once('config/NewSuperDanar.php');
 
 
 //var_dump($test->isAppInstalled('com.superdana.dana.id'));//检查app应用是否安装

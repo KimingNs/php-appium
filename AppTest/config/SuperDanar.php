@@ -1,6 +1,5 @@
 <?php
 $appPackage = 'com.superdana.dana.id';
-$appActivity = 'com.tp.money.hut.XieyiActivity';
 $appActivityBefore = 'com.tp.money.hut.XieyiActivity';
 $appActivityAfter = 'com.tp.money.hut.MainActivity';
 $config = array(
@@ -13,9 +12,9 @@ $config = array(
     'androidDeviceReadyTimeout' => 30,//等待设备在启动应用后准备就绪的超时时间，单位s
     'unicodeKeyboard' => true, //这下面两个是输入中文的设置支持
     'resetKeyboard' => true,
-    'app' => 'C:\Users\Administrator\Desktop\selenium自动化测试框架\appium\AppInstall\SuperDanar中文.apk',//执行要安装的app的绝对路径，android系统设置appPackage和appActivit，可以为空
-    'appPackage' => $appPackage,//设置启动的app包名
-    'appActivity' => $appActivity,//app界面名
+//    'app' => 'C:\Users\Administrator\Desktop\selenium自动化测试框架\appium\AppInstall\SuperDanar中文.apk',//执行要安装的app的绝对路径，android系统设置appPackage和appActivit，可以为空
+//    'appPackage' => $appPackage,//设置启动的app包名
+//    'appActivity' => $appActivity,//app界面名
 
 //    'browserName' => '',//执行自动化测试的手机web，对app应用进行测试化为空
 //    'language' => '',//设置模拟器语言
