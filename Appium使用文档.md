@@ -92,7 +92,7 @@ require_once 'PHPUnit/Autoload.php';
 require_once('../PHPUnit/Extensions/AppiumTestCase.php');
 require_once('../PHPUnit/Extensions/AppiumTestCase/Element.php');
 require_once('../vendor/appium/php-client/test/functional/android/appium_tests.php');
-require_once('config/NewSuperDanar.php');
+require_once('config/SuperDanar.php');
 ```
 
 `config`目录下`SuperDana`相对应的APP配置如下:

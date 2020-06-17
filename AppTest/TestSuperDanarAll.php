@@ -38,7 +38,7 @@ class TestSuperDanarAll extends AppiumTests
         $this->byXPath("//android.widget.TextView[@text='CogitoX中文']")->click();
         $this->byId('com.superdana.dana.id:id/tv_option_loan')->click();
         $this->byId('com.superdana.dana.id:id/register_phone')->value('085223801076');
-//        $this->byId('com.superdana.dana.id:id/get_code_btn_ok')->click();
+        $this->byId('com.superdana.dana.id:id/get_code_btn_ok')->click();
     }
 
     //第一项信息已存在
@@ -116,7 +116,7 @@ class TestSuperDanarAll extends AppiumTests
         sleep(3);
 
         //确定
-//        $this->initiateTouchAction()->press(array('x' => 408, 'y' => 1187))->release()->perform();
+        $this->initiateTouchAction()->press(array('x' => 408, 'y' => 1187))->release()->perform();
 
     }
 
@@ -463,7 +463,7 @@ class TestSuperDanarAll extends AppiumTests
         $this->initiateTouchAction()->press(array('x' => 714, 'y' => 1001))->release()->perform();
 
         //确认
-//        $this->byXPath("//android.view.View[1]/following-sibling::android.view.View[12]")->click();
+        $this->byXPath("//android.view.View[1]/following-sibling::android.view.View[12]")->click();
     }
 
     function SuperDanarText5($appPackage, $appActivityAfter, $config)
@@ -509,7 +509,7 @@ class TestSuperDanarAll extends AppiumTests
         sleep(3);
 
         $this->initiateTouchAction()->press(array('x' => 38, 'y' => 496))->release()->perform();
-//        $this->initiateTouchAction()->press(array('x' => 392, 'y' => 627))->release()->perform();
+        $this->initiateTouchAction()->press(array('x' => 392, 'y' => 627))->release()->perform();
     }
 }
 
